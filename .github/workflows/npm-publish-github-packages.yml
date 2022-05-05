@@ -30,13 +30,12 @@ jobs:
                   ssh-keyscan "119.3.15.77" >> ~/.ssh/known_hosts
             - name: deploy # 部署
               run: |
-                  ssh work@119.3.15.77 "
+                  ssh root@119.3.15.77 "
                     # 【注意】用 work 账号登录，手动创建 /home/work/imooc-lego 目录
                     # 然后 git clone git@github.com:sky4537/biz-editor-server.git -b test （私有仓库，使用 github 用户名和密码）
                     # 记得删除 origin ，否则会暴露 github 密码
 
-                    cd /work/test;
-                    git init
+                    cd /work/test2;
                     git clone git@github.com:sky4537/biz-editor-server.git;
                     git checkout test;
                     git pull origin test; # 重新下载最新代码
