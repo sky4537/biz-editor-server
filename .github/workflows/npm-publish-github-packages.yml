@@ -25,7 +25,7 @@ jobs:
             - name: set ssh key # 临时设置 ssh key
               run: |
                   mkdir -p ~/.ssh/
-                  echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_ed25519 # secret 1在这里配 https://github.com/imooc-lego/biz-editor-server/settings/secrets
+                  echo "${{secrets.WFP_ID_RSA}}" > ~/.ssh/id_ed25519 # secret 在这里配 https://github.com/imooc-lego/biz-editor-server/settings/secrets
                   chmod 600 ~/.ssh/id_ed25519
                   ssh-keyscan "119.3.15.77" >> ~/.ssh/known_hosts
             - name: deploy # 部署
