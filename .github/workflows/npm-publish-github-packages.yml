@@ -35,7 +35,7 @@ jobs:
                     # 然后 git clone git@github.com:sky4537/biz-editor-server.git -b test （私有仓库，使用 github 用户名和密码）
                     # 记得删除 origin ，否则会暴露 github 密码
 
-                    cd /work/test2;
+                    cd /work/test2/biz-editor-server;
                     git clone https://github.com/sky4537/biz-editor-server.git;
                     git checkout test;
                     git pull origin test; # 重新下载最新代码
