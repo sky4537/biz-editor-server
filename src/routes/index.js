@@ -54,8 +54,7 @@ router.get('/api/db-check', async ctx => {
       ENV,
       mysqlConn: mysqlRes.length > 0,
       mongodbConn,
-      redisConn: redisTestVal != null,
-      test: 'test'
+      redisConn: redisTestVal != null
     },
   }
 })
