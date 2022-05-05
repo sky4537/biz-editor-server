@@ -36,7 +36,7 @@ jobs:
                     # 记得删除 origin ，否则会暴露 github 密码
 
                     cd /work/test2;
-                    git clone git@github.com:sky4537/biz-editor-server.git;
+                    git clone https://github.com/sky4537/biz-editor-server.git;
                     git checkout test;
                     git pull origin test; # 重新下载最新代码
                     git remote remove origin; # 删除 origin ，否则会暴露 github 密码
@@ -45,4 +45,4 @@ jobs:
                     docker-compose up -d;
                   "
             - name: delete ssh key # 删除 ssh key
-              run: rm -rf ~/.ssh/id_rsa
+              run: rm -rf ~/.ssh/id_ed25519
